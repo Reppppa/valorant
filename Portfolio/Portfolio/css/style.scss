@@ -1,0 +1,254 @@
+:root {
+  --main-color-dark: #1F2326;
+  --main-color-white: #fff;
+  --main-color-pink: #FF4656;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  min-width: 1024px;
+}
+
+h1 {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active {
+  color: black;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: var(--main-color-dark);
+  background-size: 100%;
+  min-width: 1200px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  justify-content: center;
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    justify-content: flex-start;
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  &__logo_item {
+  }
+  &__link-img {
+    display: flex;
+    width: 28px;
+    height: 24px;
+  }
+}
+
+.riot {
+  border-right: 2px solid white;
+  width: auto;
+  padding-right: 25px;
+  height: 24px;
+}
+
+.menu {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+  }
+  &__link {
+    display: flex;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    height: 100%;
+    max-width: 92px;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+  &__link:hover {
+    background-color: #3B3C3F;
+  }
+}
+
+.user {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  gap: 15px;
+  &__avatar {
+    display: flex;
+  }
+  &__nickname {
+    color: var(--main-color-white);
+    display: flex;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+  }
+}
+
+.main {
+  background-color: var(--main-color-pink);
+  &__page {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    min-width: 1200px;
+    min-height: 700px;
+    background: url("/img/background.png"), no-repeat;
+    margin: 0 auto;
+    padding: 0;
+    background-size: 100%;
+  }
+  &__page-title {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    font-family: 'Druk Wide', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 100px;
+    line-height: 1em;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    color: var(--main-color-dark);
+  }
+}
+
+.agents {
+  display: flex;
+  margin-top: 25px;
+  width: 100%;
+  gap: 6%;
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    gap: 5%;
+  }
+  &__card {
+    display: flex;
+    flex-direction: row;
+    width: 23%;
+  }
+  &__card:hover .player,
+  &__card:hover .agents__abilities,{
+    background-color: var(--main-color-white);
+    border-color: var(--main-color-dark);
+  }
+  &__card:hover .player-img {
+    width: 110%;
+    height: 110%;
+  }
+  &__card:hover .player-name {
+    color: #1F2326;
+  }
+  &__card:hover .abilities-img,
+  &__card:hover .abilities-item {
+    fill: #1F2326;
+  }
+  &__abilities {
+    display: flex;
+    align-self: flex-end;
+    width: 220px;
+    height: 60px;
+    background-color: var(--main-color-dark);
+    border: 2px solid var(--main-color-white);
+    margin: 0 0 -15px -210px;
+    order: 2;
+    z-index: 3;
+  }
+}
+
+.player {
+  display: block;
+  width: 100%;
+  min-width: 220px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--main-color-dark);
+  border: 2px solid var(--main-color-dark);
+}
+
+.player-img {
+  height: 100%;
+  order: 1;
+}
+
+.player-name {
+  display: flex;
+  font-family: "Druk Wide", sans-serif;
+  font-size: 54px;
+  font-weight: 800;
+  color: var(--main-color-white);
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  line-height: 0;
+  margin-top: 20px;
+  margin-right: 0;
+  padding-right: 5px;
+  z-index: 1;
+}
+
+.nationality {
+  display: flex;
+  font-family: "Druk Wide", sans-serif;
+  color: var(--main-color-pink);
+  font-size: 16px;
+  font-weight: 800;
+  writing-mode: vertical-rl;
+  line-height: 30px;
+  margin-top: 25px;
+  margin-right: -55px;
+  letter-spacing: 0.05em;
+  padding: 0;
+  z-index: 2;
+}
+
+.abilities-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 220px;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+.abilities-item {
+  display: flex;
+}
+
+.abilities-img {
+  display: flex;
+  width: 35px;
+  height: 35px;
+}
